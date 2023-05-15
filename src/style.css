@@ -1,0 +1,61 @@
+body {
+    background-color: rgb(35, 35, 44);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    width: 50px;
+    height: 50px;
+    margin: 1em 1em;
+    float: left;
+    border-radius: 3em;
+}
+
+#red {
+    background-color: rgb(196, 65, 65);
+    animation: light-red 1s infinite alternate;
+}
+
+#green {
+    background-color: rgb(78, 172, 78);
+    animation: light-green 1s infinite alternate;
+    animation-delay: 1/2s;
+}
+
+#blue {
+    background-color: rgb(51, 51, 167);
+    animation: light-blue 1s infinite alternate;
+    animation-delay: 3/2s;
+}
+
+@keyframes light-red {
+    0%{text-shadow: 0;}
+    50%{
+        box-shadow: 0 0 70px red;
+        filter: brightness(3);
+    }
+    100%{text-shadow: 0;}
+}
+
+@keyframes light-green {
+    0%{text-shadow: 0;}
+    100%{
+        box-shadow: 0 0 70px green;
+        filter: brightness(3);
+    }
+    100%{text-shadow: 0;}
+}
+
+@keyframes light-blue {
+    0%{text-shadow: 0;}
+    100%{
+        box-shadow: 0 0 70px blue;
+        filter: brightness(3);
+    }
+    100%{text-shadow: 0;}
+}
